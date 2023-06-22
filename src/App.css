@@ -113,3 +113,18 @@ margin-bottom: 7px;
   width: 18px;
   height: 18px;
 }
+
+.description{
+  color: white;
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.description p{
+  max-width: 500px;
+  text-align: center;
+}

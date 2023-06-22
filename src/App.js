@@ -119,6 +119,15 @@ function App() {
   return (
     <div className="App">
         <div className="Canvas">
+            {!initial && <div className="description">
+                <h2>Имитация жизни одноклеточных</h2>
+                <p>Данная песочница существует для изучения эволюции простейших клеток, чей геном задается 64 числами,
+                    где 5 чисел генома означают конкретную команду(фотосинтез, идти, атаковать и т.д.) остальные, не занятые
+                    числа, перемещают указатель, пока не выполниться одна из основных команд(это необходимо для большей вариативности генома).
+                    Симуляция была написана мной в иследовательских целях для дальнейшего изучения и усложнения подобных песочниц на основе генетического алгоритма.
+                    Сейчас используется только мутация(один из трех потомков мутирует, остальные получают геном родителя)
+                </p>
+            </div>}
             <canvas ref={canvas} onClick={fixCurrentCellOnClick} onMouseMove={hoverOnCanvas} className="CanvasMain" id="myCanvas" width={800} height={600}/>
             {currentInfo.id && !run && <div onClick={fixCurrentCellOnClick} style={{ left: currentInfo.x+22, top: currentInfo.y+22}} className="Ramka"></div>}
         </div>
